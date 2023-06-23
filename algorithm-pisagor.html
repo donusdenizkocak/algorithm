@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pisagor-Agorithm</title>
+</head>
+<body>
+    <h2> Javascript Hipotenüs hesaplama</h2>
+    <input type="text" id="txtKenar1" placeholder="1. Dik Kenarı Girin">
+    <input type="text" id="txtKenar2" placeholder="2. Dik Kenarı Girin">
+    <button id="btn">HESAPLA</button>
+    <div id="sonuc"></div>
+
+
+
+
+</body>
+<script>
+    let btn = document.querySelector("#btn");
+        function hesapla() {
+            let kenar1 = Number(document.getElementById("txtKenar1").value);
+            let kenar2 = Number(document.getElementById("txtKenar2").value);
+            let hipotenus = Math.sqrt(kenar1 * kenar1 + kenar2 * kenar2);
+            document.querySelector("#sonuc").innerText = "Hipotenüs: " + hipotenus;
+        }
+        btn.addEventListener("click", hesapla);
+    
+    </script>    
+</html>
